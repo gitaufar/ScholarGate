@@ -1,0 +1,142 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  display: flex;
+  height: 100vh;
+  margin: 0;
+}
+
+:root {
+  --blue-dark: #193a6f;
+  --font-size: 16px;
+}
+
+.scholar-text {
+  color: #ffffff; /* Warna putih */
+}
+
+.gate-text {
+  background: linear-gradient(180deg, #ffcf21 -23.11%, #ff5c00 76.89%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+
+h1 {
+  text-align: center;
+  font-family: "Poppins";
+  font-size: 1.6rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 1.5px;
+}
+
+.menu_container {
+  height: 100vh;
+  display: flex;
+  width: 38vh;
+  padding: 40px;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  flex-shrink: 0;
+  align-self: stretch;
+  background-color: var(--blue-dark);
+}
+
+.mahasiswa_menu_container {
+  display: flex;
+  padding: 8px 8px;
+  align-items: center;
+  gap: 15px;
+  align-self: stretch;
+  border-radius: 10px;
+  background: #fff;
+}
+
+.beasiswa_menu_container {
+  display: flex;
+  padding: 8px 8px;
+  align-items: center;
+  gap: 15px;
+  align-self: stretch;
+  border-radius: 10px;
+}
+
+.icon_holder {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue-dark);
+  border-radius: 10px;
+}
+
+.icon_beasiswa_holder {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+h2 {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.8px;
+}
+
+.mahasiswa_menu_container h2 {
+  color: var(--blue-dark);
+}
+
+.beasiswa_menu_container h2 {
+  color: #fff;
+}
+
+.content_container {
+  display: block;
+  flex-grow: 1;
+}
+
+.profil_container {
+  display: flex;
+  height: 15vh;
+  width: 100%;
+  padding: 10px 40px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  background: #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.profil_container h2 {
+  color: var(--blue-dark);
+}
+
+.beasiswa_menu_container:hover {
+  background: #fff;
+}
+
+.beasiswa_menu_container:hover h2 {
+  color: var(--blue-dark);
+}
+
+.beasiswa_menu_container:hover .icon_beasiswa_holder {
+  background-color: var(--blue-dark);
+}
+
+.beasiswa_menu_container:hover path {
+  fill: white;
+}
