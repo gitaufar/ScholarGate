@@ -35,6 +35,15 @@ h1 {
   letter-spacing: 1.5px;
 }
 
+h2 {
+  font-family: "Poppins";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  letter-spacing: 0.8px;
+}
+
 .menu_container {
   height: 100vh;
   display: flex;
@@ -87,15 +96,6 @@ h1 {
   border-radius: 10px;
 }
 
-h2 {
-  font-family: "Poppins";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-  letter-spacing: 0.8px;
-}
-
 .mahasiswa_menu_container h2 {
   color: var(--blue-dark);
 }
@@ -111,7 +111,7 @@ h2 {
 
 .profil_container {
   display: flex;
-  height: 15vh;
+  height: 8vh;
   width: 100%;
   padding: 10px 40px;
   align-items: center;
@@ -139,4 +139,5 @@ h2 {
 
 .beasiswa_menu_container:hover path {
   fill: white;
+
 }
