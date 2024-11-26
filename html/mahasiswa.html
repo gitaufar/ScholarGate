@@ -121,8 +121,37 @@
                 <h1>Daftar Mahasiswa</h1>
                 <button class="btn_mhs">+ Tambahkan data</button>
             </div>
+            <div class="second_container">
+                <input class="cari_mahasiswa" type="text" placeholder="Cari mahasiswa" />
+                <input class="filter_mahasiswa" type="text" placeholder="Filter" />
+                <input class="urutkan_mahasiswa" type="text" placeholder="Urutkan" />
+                <button class="btn_cari">Cari</button>
+            </div>
+            <div class="bottom_container">
+                <table id="dataTable">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>NAMA MAHASISWA</th>
+                            <th>NIM</th>
+                            <th>FAKULTAS</th>
+                            <th>JURUSAN</th>
+                            <th>IPK</th>
+                            <th>STATUS EKONOMI</th>
+                            <th>EMAIL</th>
+                            <th>ALAMAT</th>
+                            <th>STATUS MAHASISWA</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Rows will be added here dynamically -->
+
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
+    <script type="module" src="../js/index.js"></script>
 </body>
 
 </html>

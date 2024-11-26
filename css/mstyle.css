@@ -4,9 +4,10 @@
 }
 
 body {
+  width: 100%;
   display: flex;
-  height: 100vh;
-  margin: 0;
+  align-self: stretch;
+  height: 100%;
 }
 
 :root {
@@ -38,7 +39,7 @@ h1 {
 
 h2 {
   font-family: "Poppins";
-  font-size: 16px;
+  font-size: 1rem;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
@@ -46,7 +47,6 @@ h2 {
 }
 
 .menu_container {
-  height: 100vh;
   display: flex;
   width: 38vh;
   padding: 40px;
@@ -106,14 +106,14 @@ h2 {
 }
 
 .content_container {
-  display: block;
-  flex-grow: 1;
+  background-color: #f3f6fc;
+  height: 100%;
 }
 
 .profil_container {
   display: flex;
   height: 8vh;
-  width: 100%;
+  width: 100% - 40px;
   padding: 10px 40px;
   align-items: center;
   gap: 10px;
@@ -140,10 +140,10 @@ h2 {
 
 .switch_menu_container:hover path {
   fill: white;
-
 }
 
 .main_content_container {
+  height: 100% - 40px;
   display: flex;
   padding: 30px 40px;
   flex-direction: column;
@@ -162,18 +162,90 @@ h2 {
 button {
   border-radius: 0.5rem;
   background: var(--orange);
-  border: none; 
-}
-
-.btn_mhs {
-    height: 3rem;
-    padding: 0.625rem;
+  border: none;
+  padding: 0.625rem;
   color: #fff;
   text-align: center;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   font-size: 1rem;
   font-style: normal;
   font-weight: 600;
   line-height: normal;
   letter-spacing: 0.8px;
+}
+
+.btn_mhs {
+  height: 3rem;
+}
+
+.second_container {
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  align-items: center;
+  gap: 20px;
+  align-self: stretch;
+  background: #fff;
+}
+
+input {
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1px solid var(--grey, #b0b0b0);
+}
+
+.cari_mahasiswa {
+  width: 34%;
+}
+
+.filter_mahasiswa {
+  width: 24%;
+}
+
+.urutkan_mahasiswa {
+  width: 24%;
+}
+
+.btn_cari {
+  width: 10%;
+}
+
+table {
+  border-spacing: 2.5rem; /* Menambahkan jarak antar kolom */
+  border-collapse: separate; /* Pastikan border tidak menyatu */
+}
+
+thead{
+  position: sticky;
+  top: 0; /* Pastikan jarak dari atas */
+  z-index: 1; /* Pastikan berada di atas elemen lain */
+  border-bottom: 2px solid black;
+  background-color: #fff;
+}
+
+th {
+  position: sticky;
+  color: #000;
+  font-family: Poppins;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+td {
+  color: #000;
+  font-family: Poppins;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.bottom_container {
+  position: relative;
+  height: 53vh;
+  width: 100%;
+  background-color: #fff;
+  overflow-y: auto;
 }
