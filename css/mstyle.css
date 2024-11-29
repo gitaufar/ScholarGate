@@ -249,3 +249,7 @@ td {
   background-color: #fff;
   overflow-y: auto;
 }
+
+a {
+  text-decoration: none;
+}
