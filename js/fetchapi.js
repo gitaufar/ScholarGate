@@ -72,4 +72,28 @@ async function addMahasiswa(mahasiswa) {
   }
 }
 
-export { getMahasiswa, getBeasiswa, getMahasiswaId, addMahasiswa };
+async function deleteMahasiswa(id) {
+  try {
+    const response = await fetch(baseUrl + `/mahasiswa/${id}`, {
+      method: "DELETE", // Metode HTTP POST
+      headers: {
+        "Content-Type": "application/json", // Header untuk menentukan tipe data JSON
+      }
+    });
+
+    console.log("Response Status:", response.status);
+
+    if (!response.ok) {
+      // Jika response tidak OK, lempar error
+      throw new Error("Failed to delete mahasiswa");
+    }
+
+    const data = await response.json(); // Parsing response JSON
+    return data; // Mengembalikan data dari response
+  } catch (error) {
+    console.log("Fetch error:", error); // Log error jika terjadi
+    return null;
+  }
+}
+
+export { getMahasiswa, getBeasiswa, getMahasiswaId, addMahasiswa, deleteMahasiswa };

@@ -220,7 +220,7 @@ input {
 
 table {
   border-spacing: 2.5rem; /* Menambahkan jarak antar kolom */
-  border-collapse: separate; /* Pastikan border tidak menyatu */
+  border-collapse: collapse;
 }
 
 thead {
@@ -248,6 +248,7 @@ td {
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  padding: 0.5rem;
 }
 
 .bottom_container {
@@ -308,4 +309,8 @@ select{
   flex: 1;
   display: flex;
   justify-content: end;
+}
+
+td svg {
+  cursor: pointer;
 }
