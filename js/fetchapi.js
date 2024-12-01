@@ -1,4 +1,4 @@
-const baseUrl = "http://192.168.1.5:8090/api";
+const baseUrl = "http://192.168.0.103:8090/api";
 
 async function getMahasiswa() {
   try {
