@@ -120,7 +120,7 @@ form.addEventListener('submit', async function (event) {
         const newRow = document.createElement("tr");
         const lastMahasiswa = mahasiswa_baru[mahasiswa_baru.length - 1];
         newRow.innerHTML = `
-            <td>${lastMahasiswa.id_mahasiswa}</td>
+            <td class="id_mahasiswa">${lastMahasiswa.id_mahasiswa}</td>
             <td>${lastMahasiswa.nama}</td>
             <td>${lastMahasiswa.nim}</td>
             <td>${lastMahasiswa.fakultas}</td>
