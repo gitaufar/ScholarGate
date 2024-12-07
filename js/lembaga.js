@@ -14,7 +14,7 @@ btn_mhs.addEventListener('click', () => {
     btn_mhs.style.display = 'none';
     search_container.style.display = 'none'
     bottom_container.style.display = 'none'
-    text_content.textContent = "Tambah Beasiswa"
+    text_content.textContent = "Tambah Lembaga"
     tambah_container.style.display = 'flex'
     console.log("button di click");
 });
