@@ -1,4 +1,4 @@
-import { addBeasiswa, getBeasiswa } from "./fetchapi.js";
+import { addBeasiswa, deleteBeasiswa, getBeasiswa } from "./fetchapi.js";
 
 const btn_mhs = document.querySelector(".btn_mhs");
 const search_container = document.querySelector(".second_container");
@@ -62,10 +62,10 @@ async function fetchBeasiswa() {
         tableBody.addEventListener("click", async function (event) {
             if (event.target.closest(".delete_row")) {
                 const row = event.target.closest("tr");
-                const mahasiswaId = row.querySelector(".id_mahasiswa").textContent;
+                const beasiswaId = row.querySelector(".id_beasiswa").textContent;
           
                 // Menghapus data dari server
-                const result = await deleteMahasiswa(mahasiswaId);
+                const result = await deleteBeasiswa(beasiswaId);
           
                 if (result) {
                   row.remove(); // Menghapus baris dari tampilan setelah data berhasil dihapus
@@ -87,7 +87,7 @@ form.addEventListener('submit', async function (event) {
     btn_mhs.style.display = 'flex';
     search_container.style.display = 'flex'
     bottom_container.style.display = 'flex'
-    text_content.textContent = "Daftar Mahasiswa"
+    text_content.textContent = "Daftar Beasiswa"
 
     const beasiswa = {
         nama_beasiswa: document.getElementById("nama_beasiswa").value,
@@ -150,14 +150,14 @@ form.addEventListener('submit', async function (event) {
   </defs>
 </svg></td>
         `;
-        tableBody.appendChild(newRow);
-        tableBody.addEventListener("click", async function (event) {
+        await tableBody.appendChild(newRow);
+        await tableBody.addEventListener("click", async function (event) {
             if (event.target.closest(".delete_row")) {
                 const row = event.target.closest("tr");
                 const beasiswaId = row.querySelector(".id_beasiswa").textContent;
 
                 // Menghapus data dari server
-                const result = await deleteMahasiswa(beasiswaId);
+                const result = await deleteBeasiswa(beasiswaId);
 
                 if (result) {
                   row.remove(); // Menghapus baris dari tampilan setelah data berhasil dihapus
