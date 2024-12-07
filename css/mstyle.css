@@ -219,7 +219,8 @@ input {
 }
 
 table {
-  border-spacing: 2.5rem; /* Menambahkan jarak antar kolom */
+  width: 100%;
+  flex: 1;
   border-collapse: collapse;
 }
 
@@ -228,7 +229,6 @@ thead {
   top: 0; /* Pastikan jarak dari atas */
   z-index: 1; /* Pastikan berada di atas elemen lain */
   border-bottom: 2px solid black;
-  background-color: #fff;
 }
 
 th {
@@ -239,6 +239,8 @@ th {
   font-style: normal;
   font-weight: 500;
   line-height: normal;
+  height: 4rem;
+  background-color: white;
 }
 
 td {

@@ -46,6 +46,36 @@ async function getLembaga() {
   }
 }
 
+async function getAplikasi() {
+  try {
+    const response = await fetch(baseUrl + "/aplikasi");
+    console.log("Response Status:", response.status);
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.log("Fetch error: ", error);
+    return null;
+  }
+}
+
+async function getRiwayat() {
+  try {
+    const response = await fetch(baseUrl + "/riwayat_aplikasi");
+    console.log("Response Status:", response.status);
+    if (!response.ok) {
+      throw new Error("Network response was not ok");
+    }
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    console.log("Fetch error: ", error);
+    return null;
+  }
+}
+
 async function getMahasiswaId(id) {
   try {
     const response = await fetch(baseUrl + "/mahasiswa/" + id);
@@ -161,4 +191,4 @@ async function deleteBeasiswa(id) {
   }
 }
 
-export { getMahasiswa, getBeasiswa, getLembaga, getMahasiswaId, addMahasiswa, deleteMahasiswa, addBeasiswa, deleteBeasiswa };
+export { getMahasiswa, getBeasiswa, getLembaga, getAplikasi, getMahasiswaId, addMahasiswa, deleteMahasiswa, addBeasiswa, deleteBeasiswa, getRiwayat };
