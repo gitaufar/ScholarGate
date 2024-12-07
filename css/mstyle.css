@@ -8,7 +8,7 @@ body {
   display: flex;
   align-self: stretch;
   height: 100%;
-  font-family: 'Poppins';
+  font-family: "Poppins";
   background-color: #f3f6fc;
 }
 
@@ -16,7 +16,7 @@ body {
   --blue-dark: #193a6f;
   --font-size: 16px;
   --orange: #f98125;
-  font-family: 'Poppins';
+  font-family: "Poppins";
 }
 
 .scholar-text {
@@ -251,6 +251,8 @@ td {
   font-weight: 400;
   line-height: normal;
   padding: 0.5rem;
+  text-align: center; /* Untuk memusatkan teks secara horizontal */
+  vertical-align: middle; /* Untuk memusatkan teks secara vertikal */
 }
 
 .bottom_container {
@@ -294,20 +296,19 @@ form {
   flex-direction: column; /* Supaya form disusun vertikal */
 }
 
-
 .form-group {
   display: flex; /* Gunakan Flexbox */
   align-items: center; /* Ratakan secara vertikal */
   margin-bottom: 20px; /* Jarak antar elemen */
 }
 
-select{
+select {
   flex: 3;
   padding: 10px;
   border-radius: 8px;
 }
 
-.btn_form{
+.btn_form {
   flex: 1;
   display: flex;
   justify-content: end;

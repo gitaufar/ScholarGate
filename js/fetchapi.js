@@ -63,7 +63,7 @@ async function getAplikasi() {
 
 async function getRiwayat() {
   try {
-    const response = await fetch(baseUrl + "/riwayat_aplikasi");
+    const response = await fetch(baseUrl + "/riwayat_beasiswa");
     console.log("Response Status:", response.status);
     if (!response.ok) {
       throw new Error("Network response was not ok");
@@ -102,7 +102,7 @@ async function addMahasiswa(mahasiswa) {
     });
 
     console.log("Response Status:", response.status);
-    console.log(mahasiswa)
+    console.log(mahasiswa);
 
     if (!response.ok) {
       // Jika response tidak OK, lempar error
@@ -123,7 +123,7 @@ async function deleteMahasiswa(id) {
       method: "DELETE", // Metode HTTP POST
       headers: {
         "Content-Type": "application/json", // Header untuk menentukan tipe data JSON
-      }
+      },
     });
 
     console.log("Response Status:", response.status);
@@ -152,7 +152,7 @@ async function addBeasiswa(beasiswa) {
     });
 
     console.log("Response Status:", response.status);
-    console.log(beasiswa)
+    console.log(beasiswa);
 
     if (!response.ok) {
       // Jika response tidak OK, lempar error
@@ -173,7 +173,7 @@ async function deleteBeasiswa(id) {
       method: "DELETE", // Metode HTTP POST
       headers: {
         "Content-Type": "application/json", // Header untuk menentukan tipe data JSON
-      }
+      },
     });
 
     console.log("Response Status:", response.status);
@@ -191,4 +191,15 @@ async function deleteBeasiswa(id) {
   }
 }
 
-export { getMahasiswa, getBeasiswa, getLembaga, getAplikasi, getMahasiswaId, addMahasiswa, deleteMahasiswa, addBeasiswa, deleteBeasiswa, getRiwayat };
+export {
+  getMahasiswa,
+  getBeasiswa,
+  getLembaga,
+  getAplikasi,
+  getMahasiswaId,
+  addMahasiswa,
+  deleteMahasiswa,
+  addBeasiswa,
+  deleteBeasiswa,
+  getRiwayat,
+};

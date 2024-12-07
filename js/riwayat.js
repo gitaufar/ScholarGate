@@ -1,4 +1,4 @@
-import { getBeasiswa } from './fetchapi.js';
+import { getRiwayat } from './fetchapi.js';
 
 const btn_mhs = document.querySelector('.btn_mhs');
 const search_container = document.querySelector('.second_container')
@@ -20,21 +20,20 @@ btn_mhs.addEventListener('click', () => {
 });
 
 //contoh ambil data listMahasiswa
-async function fetchBeasiswa() {
-    const listBeasiswa = await getBeasiswa()
-    listBeasiswa.forEach(element => {
+async function fetchRiwayat() {
+    const listRiwayat = await getRiwayat()
+    listRiwayat.forEach(element => {
         const tableBody = document.querySelector("#dataTable tbody");
         const newRow = document.createElement("tr");
         newRow.innerHTML = `
-        <td class="id_mahasiswa">${element.id_beasiswa}</td>
-        <td>${element.nama_beasiswa}</td>
-        <td>${element.jenis_beasiswa}</td>
-        <td>${element.ipk_minimal}</td>
-        <td>${element.kriteria_status_ekonomi}</td>
+        <td class="id_riwayat">${element.id_rekap_riwayat}</td>
+        <td>${element.id_mahasiswa}</td>
+        <td>${element.id_beasiswa}</td>
         <td>${element.jumlah_beasiswa}</td>
-        <td>${element.tenggat_waktu}</td>
-        <td>${element.deskripsi}</td>
-        <td>${element.sumber_beasiswa}</td>
+        <td>${element.tanggal_penerimaan}</td>
+        <td>${element.beasiswa_diterima_total}</td>
+        <td>${element.jumlah_aplikasi}</td>
+        <td>${element.beasiswa_terakhir_diterima}</td>
         <td><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 13 13" fill="none">
   <path d="M0 10.352V13H2.64802L10.4579 5.19011L7.80989 2.5421L0 10.352ZM13 2.64802L10.352 0L8.56545 1.79359L11.2135 4.44161L13 2.64802Z" fill="#193A6F"/>
 </svg></td>
@@ -167,5 +166,5 @@ async function fetchBeasiswa() {
 //     }
 // })
 
-window.onload = fetchBeasiswa;
+window.onload = fetchRiwayat;
 console.log("index.js is connected and running!");
