@@ -161,4 +161,4 @@ async function deleteBeasiswa(id) {
   }
 }
 
-export { getMahasiswa, getBeasiswa, getMahasiswaId, addMahasiswa, deleteMahasiswa, addBeasiswa, deleteBeasiswa };
+export { getMahasiswa, getBeasiswa, getLembaga, getMahasiswaId, addMahasiswa, deleteMahasiswa, addBeasiswa, deleteBeasiswa };
