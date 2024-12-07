@@ -1,4 +1,4 @@
-const baseUrl = "http://192.168.0.103:8090/api";
+const baseUrl = "http://192.168.202.127:8090/api";
 
 async function getMahasiswa() {
   try {
@@ -96,4 +96,54 @@ async function deleteMahasiswa(id) {
   }
 }
 
-export { getMahasiswa, getBeasiswa, getMahasiswaId, addMahasiswa, deleteMahasiswa };
+async function addBeasiswa(beasiswa) {
+  try {
+    const response = await fetch(baseUrl + "/beasiswa", {
+      method: "POST", // Metode HTTP POST
+      headers: {
+        "Content-Type": "application/json", // Header untuk menentukan tipe data JSON
+      },
+      body: JSON.stringify(beasiswa), // Konversi objek mahasiswa ke format JSON
+    });
+
+    console.log("Response Status:", response.status);
+    console.log(beasiswa)
+
+    if (!response.ok) {
+      // Jika response tidak OK, lempar error
+      throw new Error("Failed to add beasiswa");
+    }
+
+    const data = await response.json(); // Parsing response JSON
+    return data; // Mengembalikan data dari response
+  } catch (error) {
+    console.log("Fetch error:", error); // Log error jika terjadi
+    return null;
+  }
+}
+
+async function deleteBeasiswa(id) {
+  try {
+    const response = await fetch(baseUrl + `/beasiswa/${id}`, {
+      method: "DELETE", // Metode HTTP POST
+      headers: {
+        "Content-Type": "application/json", // Header untuk menentukan tipe data JSON
+      }
+    });
+
+    console.log("Response Status:", response.status);
+
+    if (!response.ok) {
+      // Jika response tidak OK, lempar error
+      throw new Error("Failed to delete mahasiswa");
+    }
+
+    const data = await response.json(); // Parsing response JSON
+    return data; // Mengembalikan data dari response
+  } catch (error) {
+    console.log("Fetch error:", error); // Log error jika terjadi
+    return null;
+  }
+}
+
+export { getMahasiswa, getBeasiswa, getMahasiswaId, addMahasiswa, deleteMahasiswa, addBeasiswa, deleteBeasiswa };
