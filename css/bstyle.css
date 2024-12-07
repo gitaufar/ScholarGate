@@ -1,0 +1,317 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    width: 100%;
+    display: flex;
+    align-self: stretch;
+    height: 100%;
+    font-family: 'Poppins';
+    background-color: #f3f6fc;
+  }
+  
+  :root {
+    --blue-dark: #193a6f;
+    --font-size: 16px;
+    --orange: #f98125;
+    font-family: 'Poppins';
+  }
+  
+  .scholar-text {
+    color: #ffffff;
+  }
+  
+  .gate-text {
+    background: linear-gradient(180deg, #ffcf21 -23.11%, #ff5c00 76.89%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+  }
+  
+  h1 {
+    text-align: center;
+    font-family: "Poppins";
+    font-size: 1.6rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 1.5px;
+  }
+  
+  h2 {
+    font-family: "Poppins";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.8px;
+  }
+  
+  .menu_container {
+    height: 100%;
+    display: flex;
+    width: 38vh;
+    padding: 40px;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    flex-shrink: 0;
+    align-self: stretch;
+    background-color: var(--blue-dark);
+  }
+  
+  .mahasiswa_menu_container {
+    display: flex;
+    padding: 8px 8px;
+    align-items: center;
+    gap: 15px;
+    align-self: stretch;
+    border-radius: 10px;
+    background: #fff;
+  }
+  
+  .switch_menu_container {
+    display: flex;
+    padding: 8px 8px;
+    align-items: center;
+    gap: 15px;
+    align-self: stretch;
+    border-radius: 10px;
+  }
+  
+  .icon_holder {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue-dark);
+    border-radius: 10px;
+  }
+  
+  .icon_switch_holder {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 10px;
+  }
+  
+  .mahasiswa_menu_container h2 {
+    color: var(--blue-dark);
+  }
+  
+  .switch_menu_container h2 {
+    color: #fff;
+  }
+  
+  .content_container {
+    flex-grow: 1;
+    background-color: #f3f6fc;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .profil_container {
+    display: flex;
+    height: 8vh;
+    width: 100% - 40px;
+    padding: 10px 40px;
+    align-items: center;
+    gap: 10px;
+    align-self: stretch;
+    background: #fff;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  }
+  
+  .profil_container h2 {
+    color: var(--blue-dark);
+  }
+  
+  .switch_menu_container:hover {
+    background: #fff;
+  }
+  
+  .switch_menu_container:hover h2 {
+    color: var(--blue-dark);
+  }
+  
+  .switch_menu_container:hover .icon_switch_holder {
+    background-color: var(--blue-dark);
+  }
+  
+  .switch_menu_container:hover path {
+    fill: white;
+  }
+  
+  .main_content_container {
+    flex-grow: 1;
+    display: flex;
+    padding: 30px 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    align-self: stretch;
+  }
+  
+  .top_container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  button {
+    border-radius: 0.5rem;
+    background: var(--orange);
+    border: none;
+    padding: 0.625rem;
+    color: #fff;
+    text-align: center;
+    font-family: "Poppins";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+  }
+  
+  .btn_mhs {
+    height: 3rem;
+  }
+  
+  .second_container {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+    align-items: center;
+    gap: 20px;
+    align-self: stretch;
+    background: #fff;
+  }
+  
+  input {
+    padding: 0.8rem;
+    border-radius: 8px;
+    border: 1px solid var(--grey, #b0b0b0);
+  }
+  
+  .cari_mahasiswa {
+    width: 34%;
+  }
+  
+  .filter_mahasiswa {
+    width: 24%;
+  }
+  
+  .urutkan_mahasiswa {
+    width: 24%;
+  }
+  
+  .btn_cari {
+    width: 10%;
+  }
+  
+  table {
+    border-spacing: 1rem; /* Menambahkan jarak antar kolom */
+    border-collapse: separate;
+  }
+  
+  thead {
+    position: sticky;
+    top: 0; /* Pastikan jarak dari atas */
+    z-index: 1; /* Pastikan berada di atas elemen lain */
+    border-bottom: 2px solid black;
+    background-color: #fff;
+  }
+  
+  th {
+    position: sticky;
+    color: #000;
+    font-family: Poppins;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding: 0.5rem;
+  }
+  
+  td {
+    color: #000;
+    font-family: Poppins;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 0.5rem;
+  }
+  
+  .bottom_container {
+    position: relative;
+    height: 53vh;
+    width: 100%;
+    background-color: #fff;
+    overflow-y: auto;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  .tambah_mahasiswa_container {
+    display: none;
+    padding: 20px 30px;
+    flex-direction: column;
+    gap: 25px;
+    align-self: stretch;
+    background: #fff;
+  }
+  
+  label {
+    flex: 1;
+    color: #000;
+    font-family: "Poppins";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.7px;
+  }
+  
+  input {
+    flex: 3;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column; /* Supaya form disusun vertikal */
+  }
+  
+  
+  .form-group {
+    display: flex; /* Gunakan Flexbox */
+    align-items: center; /* Ratakan secara vertikal */
+    margin-bottom: 20px; /* Jarak antar elemen */
+  }
+  
+  select{
+    flex: 3;
+    padding: 10px;
+    border-radius: 8px;
+  }
+  
+  .btn_form{
+    flex: 1;
+    display: flex;
+    justify-content: end;
+  }
+  
+  td svg {
+    cursor: pointer;
+  }
